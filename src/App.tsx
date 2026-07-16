@@ -33,4 +33,5 @@ class App extends Component<{}, State> {
   }
 }
 export { App };
+export default App;
 
