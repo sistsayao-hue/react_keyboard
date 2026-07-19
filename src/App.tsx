@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 type State = {
   pressedKey: string | null;
 };
@@ -7,19 +6,15 @@ class App extends Component<{}, State> {
   state: Readonly<State> = {
     pressedKey: null,
   };
-
   handleKeyUp = (event: KeyboardEvent) => {
     this.setState({ pressedKey: event.key });
   };
-
   componentDidMount() {
     document.addEventListener('keyup', this.handleKeyUp);
   }
-
   componentWillUnmount() {
     document.removeEventListener('keyup', this.handleKeyUp);
   }
-
   render() {
     return (
       <div className="App">
